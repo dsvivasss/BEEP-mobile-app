@@ -2,8 +2,6 @@
 
 import React from "react"
 import { View, StyleSheet } from "react-native"
-import RepositoryList from "./RepositoryList"
-import AppBar from "./AppBar"
 import { Route, Routes } from "react-router-native"
 import LoginPage from "../pages/Login"
 import HomePage from "../pages/Home"
@@ -12,15 +10,6 @@ import RepeatPage from "../pages/Repeat"
 import RegisterPage from "../pages/Register"
 import ForgotPage from "../pages/Forgot"
 import { LinearGradient } from 'expo-linear-gradient';
-
-// import { Platform } from "react-native-web"
-
-// Otra forma de importar un componente segun la plataforma
-
-// const AppBar = Platform.select({
-//     ios: () => require('./IOSAppBar.jsx').default,
-//     default: () => require('AppBar.jsx').default
-// })()
 
 const Main = () => {
     return (
@@ -31,7 +20,7 @@ const Main = () => {
                 start={{ x: 0, y: 0 }}
                 end={{ x: 0, y: 1 }}
             >
-                {/* <AppBar /> */}
+
                 <Routes>
 
                     <Route path='/' element={<LoginPage />} />
@@ -41,11 +30,6 @@ const Main = () => {
                     <Route path='/create' element={<CreatePage />} />
                     <Route path='/repeat' element={<RepeatPage />} />
 
-                    {/* <Route path='/' element={<RepositoryList />} /> */}
-                    {/* <Route path='/signin' element={<LoginPage />}>
-
-                    </Route> */}
-                    {/* <Redirect to='/' /> */}
                 </Routes>
             </LinearGradient>
 
